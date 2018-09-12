@@ -342,7 +342,10 @@ export default [
         sysId:      si.SYSID_LIB_CRITEO,
         sysType:    st.SYSTYPE_LIBRARY,
         ref:        si.SYSID_AUC_CRITEO,
-        listen:     'static.criteo.net/js/ld/publishertag.js'
+        listen:     [
+          'static.criteo.net/js/ld/publishertag.js',
+          'static.criteo.net/js/ld/publishertag.prebid.js'
+        ]
     },
     {
         // E-Planning
@@ -778,6 +781,7 @@ export default [
             //      adengine2_rubicon_fastlane_js,adengine2_rubicon_vulcan_js,optimizely_blocking_js,qualaroo_blocking_js
             //   2) http://slot1.images1.wikia.nocookie.net/__am/1476211006/group/-/prebid_prod_js
             '*wikia.*(prebid_js|prebid_prod_js)*',
+            'static.criteo.net/js/ld/publishertag.prebid.js'
         ],
     },
     {
